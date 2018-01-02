@@ -1,0 +1,2 @@
+#List of dependencies (must specifiy version since dependencies may update remotely)
+Django==1.10.5
