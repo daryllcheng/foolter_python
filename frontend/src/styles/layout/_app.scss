@@ -1,0 +1,14 @@
+.app {
+  display: grid;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: 
+    "search"
+    "foods";
+
+  justify-items: center;
+  align-items: center;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 5px;
+}
+ 

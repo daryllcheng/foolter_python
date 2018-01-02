@@ -1,0 +1,33 @@
+.search {
+  grid-area: search;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+
+  .steps {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .slider {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+      "label icon";
+
+    .sliderLabel {
+      grid-area: label;
+      font-weight: bold;
+      font-size: 20px;
+      justify-self: right;
+      margin-right: 5px;
+    }
+
+    img {
+      grid-area: icon;
+      width: 2em;
+      align-self: center;
+      justify-self: left;
+    }
+  }
+}

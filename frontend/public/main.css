@@ -1,0 +1,115 @@
+/* Font */
+/* Color Palatte */
+@import url("https://fonts.googleapis.com/css?family=Neuton|Nunito");
+.app {
+  display: grid;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: "search" "foods";
+  justify-items: center;
+  align-items: center;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 5px; }
+
+.foods {
+  grid-area: foods;
+  text-align: center; }
+  .foods .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .foods .grid .food {
+      display: grid;
+      grid-template-rows: 40% 60%;
+      grid-template-areas: "name" "nutrients";
+      align-items: center;
+      justify-items: center;
+      margin: 10px; }
+      .foods .grid .food .foodName {
+        grid-area: name; }
+      .foods .grid .food .nutrients {
+        grid-area: nutrients; }
+
+.search {
+  grid-area: search;
+  width: 50%;
+  text-align: center;
+  margin: auto; }
+  .search .steps {
+    justify-content: center;
+    text-align: center; }
+  .search .slider {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "label icon"; }
+    .search .slider .sliderLabel {
+      grid-area: label;
+      font-weight: bold;
+      font-size: 20px;
+      justify-self: right;
+      margin-right: 5px; }
+    .search .slider img {
+      grid-area: icon;
+      width: 2em;
+      align-self: center;
+      justify-self: left; }
+
+.foods .fa-arrow-circle-up {
+  font-size: 2em;
+  color: #229DD6; }
+
+.foods li {
+  margin: 5px;
+  list-style: none; }
+  .foods li .food {
+    width: 20em;
+    height: 10em;
+    padding: 2px 5px;
+    background-color: #F9C343;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    color: #1A1A1A; }
+    .foods li .food .foodName {
+      font-weight: 700;
+      padding: 5px; }
+    .foods li .food .nutrient {
+      display: inline-block;
+      margin: 5px;
+      text-align: center;
+      font-family: "Neuton", serif;
+      font-size: 12px; }
+      .foods li .food .nutrient img {
+        width: 2em; }
+    .foods li .food:hover {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.app {
+  font-family: "Nunito", sans-serif;
+  color: #1A1A1A; }
+  .app .pulsate {
+    -webkit-transition: all .3s ease;
+    /* Safari and Chrome */
+    -moz-transition: all .3s ease;
+    /* Firefox */
+    -o-transition: all .3s ease;
+    /* IE 9 */
+    -ms-transition: all .3s ease;
+    /* Opera */
+    transition: all .3s ease;
+    cursor: pointer; }
+    .app .pulsate:hover {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transform: translateZ(0) scale(1.2);
+      /* Safari and Chrome */
+      -moz-transform: scale(1.2);
+      /* Firefox */
+      -ms-transform: scale(1.2);
+      /* IE 9 */
+      -o-transform: translatZ(0) scale(1.2);
+      /* Opera */
+      transform: translatZ(0) scale(1.2); }
+
+.search .searchIcon {
+  font-size: 2em;
+  color: #229DD6; }

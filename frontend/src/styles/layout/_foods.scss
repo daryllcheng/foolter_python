@@ -1,0 +1,30 @@
+.foods {
+  grid-area: foods;
+  text-align: center;
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .food {
+      display: grid;
+      grid-template-rows: 40% 60%;
+      grid-template-areas: 
+        "name"
+        "nutrients";
+      
+      align-items: center;
+      justify-items: center;
+      margin: 10px;
+      
+      .foodName {
+        grid-area: name;
+      }
+
+      .nutrients {
+        grid-area: nutrients;
+      }
+   }
+  }
+}
