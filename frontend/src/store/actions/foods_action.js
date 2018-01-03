@@ -4,7 +4,7 @@ import withQuery  from 'with-query';
 export function fetchFoods(params) {
   return async(dispatch) => {
     try { 
-      const response = await fetch(withQuery('/foods', params, {
+      const response = await fetch(withQuery('/api/foods', params, {
         method: "GET",
         header: {
           Accept: "application/json"

@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url, include
+from django.views.generic import TemplateView
 
 urlpatterns = [
     url('admin/', admin.site.urls),
-    url(r'^', include('project.api.urls')),
+    url(r'^api', include('project.api.urls')),
+    url(r'^', TemplateView.as_view(template_name="index.html")),
 ]
