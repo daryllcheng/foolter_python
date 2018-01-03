@@ -46,14 +46,14 @@ module.exports = {
     // the line below with these two lines if you prefer the stock client:
     // require.resolve('webpack-dev-server/client') + '?/',
     // require.resolve('webpack/hot/dev-server'),
-
+    require.resolve('webpack-dev-server/client') + '?http://localhost:3000',
+    require.resolve('webpack/hot/dev-server'),
     // Finally, this is your app's code:
     paths.appIndexJs,
     // We include the app code last so that if there is a runtime error during
     // initialization, it doesn't blow up the WebpackDevServer client, and
     // changing JS code would still trigger a refresh.
-    require.resolve('webpack-dev-server/client') + '?http://localhost:3000',
-    require.resolve('webpack/hot/dev-server'),
+
   ],
   output: {
     // Add /* filename */ comments to generated require()s in the output.
@@ -224,7 +224,6 @@ module.exports = {
       inject: true,
       template: paths.appHtml,
     }),
-    new BundleTracker({path: paths.statsRoot, filename: 'webpack-stats.dev.json'}),
     // Add module names to factory functions so they appear in browser profiler.
     new webpack.NamedModulesPlugin(),
     // Makes some environment variables available to the JS code, for example:
@@ -247,6 +246,7 @@ module.exports = {
     // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
     // You can remove this if you don't use Moment.js:
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    new BundleTracker({path: paths.statsRoot, filename: 'webpack-stats.dev.json'}),
   ],
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.
